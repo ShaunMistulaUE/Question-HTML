@@ -18,7 +18,7 @@ const playlist = [
   {
     title: "gusto kita",
     artist:"someone",
-    src: "audio/song21.mp3",
+    src: "audio/Alam Mo Na... Di Ba.mp3",
     imagePath: "path/to/song1.jpg"
   },
   {
@@ -109,6 +109,25 @@ playlist.forEach(song => {
   // Add event listener to the toggle button
   toggleAutoplayButton.addEventListener("click", toggleAutoplay);
   
-  // Initial mute state (autoplay starts muted)
-  player.src = playlist[0].src; // Set the source of the first song
-  player.play(); // Play muted audio
+  function playNextSong() {
+    let currentSongIndex = playlist.findIndex(song => song.src === player.src);
+    if (currentSongIndex !== -1) {
+      const nextSongIndex = (currentSongIndex + 1) % playlist.length;
+      player.src = playlist[nextSongIndex].src;
+      player.play();
+    }
+  }
+  
+  // Event listener for 'ended' event on the player
+  player.addEventListener("ended", playNextSong);
+  
+  // Event listener for 'seeked' event on the player
+  player.addEventListener("seeked", function() {
+    // Check if user seeks to the end of the current song
+    if (player.currentTime === player.duration) {
+      playNextSong();
+    }
+  });
+    // Initial mute state (autoplay starts muted)
+    player.src = playlist[0].src; // Set the source of the first song
+    player.play(); // Play muted audio
