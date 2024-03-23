@@ -131,3 +131,5 @@ playlist.forEach(song => {
     // Initial mute state (autoplay starts muted)
     player.src = playlist[0].src; // Set the source of the first song
     player.play(); // Play muted audio
+
+
