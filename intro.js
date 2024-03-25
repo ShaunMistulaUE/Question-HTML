@@ -1,6 +1,7 @@
 const box = document.querySelector('.zoom-in-out-box');
 const box1 = document.querySelector('.zoom-in-out-box1');
 const box2 = document.querySelector('.zoom-in-out-box2');
+const box3 = document.querySelector('.ldio-0d4v8gn0jow');
 
 setTimeout(function() {
   box.style.display = 'none';
@@ -16,6 +17,11 @@ setTimeout(function() {
   box2.style.display = 'none';
   
 }, 15000); // Wait 5 seconds (5000 milliseconds)
+
+setTimeout(function() {
+  box2.style.display = 'none';
+  
+}, 20000); // Wait 5 seconds (5000 milliseconds)
 
 
 const delay = 20 * 1000;
