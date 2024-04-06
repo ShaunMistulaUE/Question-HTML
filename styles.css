@@ -6,7 +6,9 @@
 
 .backgroundMain{
   position:relative;
-  background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black);
+  background-image: url(/images/test1.jpg);
+  filter: blur(50px);
+  -webkit-filter: blur(5px);
   animation: slide-in-bottom 1s ease-in-out forwards;
 }
 
@@ -58,7 +60,7 @@
   }
   .m{
 
-    margin-top: 50px;
+    margin-top: 5px;
     display:flex;
     
   }
@@ -207,13 +209,16 @@
   @media (max-width: 768px) {
     .background{
       position:relative;
-      background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black)
+      background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black);
+      
       /* background-color: rgb(48, 48, 48); */
     }
     
     .backgroundMain{
       position:relative;
-      background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black);
+      background-image: url(/images/test1.jpg);
+      filter: blur(50px);
+      -webkit-filter: blur(5px);
       animation: slide-in-bottom 1s ease-in-out forwards;
     }
     
@@ -255,7 +260,7 @@
         height: 100vh; 
         width: 50%;  /* Or any other desired width */
         margin: auto;
-        margin-top: 200px;
+        margin-top: 10px;
         color: aliceblue;
       }
       .m{
@@ -293,11 +298,12 @@
     
     .listBG{
       background-color: rgba(5, 35, 16, 0.323);
-      width: auto;
-      max-width: 300px;
+      width: 300px;
+      max-width: 800px;
     }
     #player{
       width: 300px;
+      max-width: 800px;
     }
     
     .song-container {
