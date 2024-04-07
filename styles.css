@@ -9,6 +9,7 @@
   background-image: url(/images/test1.jpg);
   filter: blur(50px);
   -webkit-filter: blur(5px);
+  height: 100%;
   animation: slide-in-bottom 1s ease-in-out forwards;
 }
 
@@ -209,8 +210,7 @@
   @media (max-width: 768px) {
     .background{
       position:relative;
-      background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black);
-      
+      background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black)
       /* background-color: rgb(48, 48, 48); */
     }
     
@@ -219,11 +219,12 @@
       background-image: url(/images/test1.jpg);
       filter: blur(50px);
       -webkit-filter: blur(5px);
+      height: 100%;
       animation: slide-in-bottom 1s ease-in-out forwards;
     }
     
     
-    .zoom-in-out-box, .zoom-in-out-box1, .zoom-in-out-box2 {
+    .zoom-in-out-box, .zoom-in-out-box1, .zoom-in-out-box2, .ldio-0d4v8gn0jow {
       position:absolute;
       width: 500px;
         background: #f6f6f600;
@@ -244,6 +245,11 @@
         opacity: 0;
         animation-delay: 5s;
       }
+      .ldio-0d4v8gn0jow{
+        opacity: 0;
+        animation-delay: 5s;
+      }
+    
     
       .d{
         display: flex;
@@ -260,12 +266,12 @@
         height: 100vh; 
         width: 50%;  /* Or any other desired width */
         margin: auto;
-        margin-top: 10px;
+        margin-top: 200px;
         color: aliceblue;
       }
       .m{
     
-        margin-top: 50px;
+        margin-top: 5px;
         display:flex;
         
       }
@@ -298,12 +304,11 @@
     
     .listBG{
       background-color: rgba(5, 35, 16, 0.323);
-      width: 300px;
-      max-width: 800px;
+      width: auto;
+      max-width: 300px;
     }
     #player{
       width: 300px;
-      max-width: 800px;
     }
     
     .song-container {
@@ -375,7 +380,7 @@
         from { transform: translateY(100%); } /* Start from 100% off-screen (bottom) */
         to { transform: translateY(0); } /* Animate to original position */
       }
-
+    
       @keyframes ldio-0d4v8gn0jow {
         0% { transform: translate(-50%,-50%) rotate(0deg); }
         100% { transform: translate(-50%,-50%) rotate(360deg); }
@@ -409,6 +414,4 @@
         transform-origin: 0 0; /* see note above */
       }
       .ldio-0d4v8gn0jow div { box-sizing: content-box; }
-    
-  }
-  
+    }
