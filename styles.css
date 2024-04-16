@@ -53,7 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh; 
+    height: 120vh; 
     width: 100%;  /* Or any other desired width */
     margin: auto;
     margin-top: 0px;
@@ -124,6 +124,11 @@
   height: 300px;
   background-color: aliceblue;
   
+}
+
+.album-cover{
+  align-items: center;
+  justify-content: center;
 }
 
   .zoom-in-out-box2{
