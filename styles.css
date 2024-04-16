@@ -103,7 +103,9 @@
   max-width: 900px;
 }
 #player{
-  max-width: 900px;
+  width: 400px;
+  max-width: 600px;
+  min-width: 200px;
 }
 
 .song-container {
