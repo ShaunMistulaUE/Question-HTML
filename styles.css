@@ -71,6 +71,10 @@
   color:aliceblue;
   display:inline-flex;
 }
+
+.ptext{
+  max-width: 600px;
+}
 .playlist{
   align-items: center;
   justify-content: center;

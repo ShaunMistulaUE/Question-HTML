@@ -16,8 +16,8 @@ const playlist = [
     imagePath: "images/test1.jpg"
   },
   {
-    title: "gusto kita",
-    artist:"someone",
+    title: "Gusto 'kita'",
+    artist:"Zack Tabudlo",
     src: "audio/GUSTO - ZACK TABUDLO.mp3",
     imagePath: "path/to/song1.jpg"
   },
@@ -122,7 +122,7 @@ playlist.forEach(song => {
     player.src = playlist[0].src; // Set source of the first song
     player.play();
     // Unmute after a short delay (optional)
-    // setTimeout(() => { player.muted = false; }, 500); // Unmute after 0.5 seconds
+    setTimeout(() => { player.muted = false; }, 0); // Unmute after 0.5 seconds
   });
     // Initial mute state (autoplay starts muted)
     player.src = playlist[0].src; // Set the source of the first song
