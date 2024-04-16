@@ -54,9 +54,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh; 
-    width: 50%;  /* Or any other desired width */
+    width: 100%;  /* Or any other desired width */
     margin: auto;
-    margin-top: 200px;
+    margin-top: 0px;
     color: aliceblue;
   }
   .m{
@@ -94,11 +94,12 @@
 
 .listBG{
   background-color: rgba(5, 35, 16, 0.323);
+  font-size:x-large;
   width: auto;
-  max-width: 300px;
+  width: 900px;
 }
 #player{
-  width: 300px;
+  width: 900px;
 }
 
 .song-container {
