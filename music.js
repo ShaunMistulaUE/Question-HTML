@@ -1,11 +1,33 @@
-const audioElement = document.getElementById("player");
 
-function playAudio() {
-  audioElement.play();
+// Get references to the song list and elements
+const songList = document.getElementById("song-list");
+const player = document.getElementById("player");
+const albumCover = document.getElementById("album-cover");
+const toggleAutoplayButton = document.getElementById("toggleAutoplay");
+let ctrlIcon = document.getElementById("ctrlIcon")
+
+player.onloadedmetadata = function(){
+  progressBar.max = player.duration;
+  progressBar.value = player.currentTime;
 }
 
-function pauseAudio() {
-  audioElement.pause();
+function playPauseFunc(){
+  if(ctrlIcon.classList.contains("fa-pause")){
+    player.pause();
+    ctrlIcon.classList.remove("fa-pause");
+    ctrlIcon.classList.add("fa-play");
+  }
+  else{
+    player.play();
+    ctrlIcon.classList.add("fa-pause");
+    ctrlIcon.classList.remove("fa-play");
+  }
+}
+
+if(player.play()){
+  setInterval(()=>{
+    progressBar.value = player.currentTime
+  }, 100)
 }
 
 const playlist = [
@@ -30,31 +52,7 @@ const playlist = [
   // ... more songs in the playlist
 ];
 
-// Get references to the song list and elements
-const songList = document.getElementById("song-list");
-const player = document.getElementById("player");
-const albumCover = document.getElementById("album-cover");
-const toggleAutoplayButton = document.getElementById("toggleAutoplay");
-let ctrlIcon = document.getElementById("play")
 
-player.onloadmetadata = function(){
-  progress.max = player.duration;
-  progress.value = player.currentTime;
-}
-
-function playPause(){
-  if(play.classList.contains("fa-pause")){
-    player.pause();
-    ctrlIcon.classList.remove("fa-pause")
-    ctrlIcon.classList.add("fa-play")
-
-  }
-  else{
-    player.play();
-    ctrlIcon.classList.add("fa-pause")
-    ctrlIcon.classList.remove("fa-play")
-  }
-}
 
 // Function to create a list item for each song
 function createSongListItem(song) {
