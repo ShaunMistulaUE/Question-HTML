@@ -1,7 +1,7 @@
 .background{
   position:relative;
   /* background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black); */
-  background-image: linear-gradient(rgb(50, 136, 65), rgb(99, 187, 118),rgb(233, 233, 233),rgb(236, 236, 236),rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(136, 50, 50), rgb(72, 34, 104),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0));
   /* background-color: rgb(48, 48, 48); */
 }
 
@@ -76,21 +76,21 @@
 .ptext{
   margin: 20px;
   max-width: 600px;
-  color: #5c5c5c;
+  color: #acacac;
 }
 .playlist{
   align-items: center;
   justify-content: center;
 }
 #song-list{
-  color: rgb(14, 14, 14);
+  color: rgb(255, 255, 255);
   line-height: 2.5;
   list-style-type: none;
 }
 
 .songHead{
   margin: 30px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .song-container {
@@ -122,6 +122,15 @@
   flex-direction: column; /* Stack title and artist vertically */
   align-items: flex-start; /* Align content to the left */
   /* Optional styles for the container */
+  color: white;
+            background: rgba(53, 53, 53, 0.219);
+            box-shadow: 0 0 0px rgb(255, 255, 255);
+}
+
+.song-container:hover{
+  color: white;
+  
+  box-shadow: 0 0 50px rgb(13, 126, 32);
 }
 
 .artist {
@@ -142,6 +151,10 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+
+  color: #111;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 0 40px rgb(255, 255, 255);
 }
 
   .zoom-in-out-box2{
