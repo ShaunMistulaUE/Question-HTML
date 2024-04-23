@@ -16,10 +16,22 @@
 }
 .navbar{
   background: #4646465e;
+  
+  
 }
 
 .navbar-One,navbar ms-auto{
   background: #08080800;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.container-fluid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -38,18 +50,29 @@
     align-items: center;
   }
 
+  .navbar, fixed-bottom navbar-expand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .song-list li.playing {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background for highlight */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for emphasis */
+  }
+
   .playerControls div{
     width: 60px;
-height: 60px;
-margin: 20px;
-background: #000000;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-border-radius: 50%;
-color: #f53192;
-box-shadow: 0 10px 20px rgba(83, 46, 185, 0.22);
-cursor: pointer;
+    height: 60px;
+    margin: 20px;
+    background: #000000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f53192;
+    box-shadow: 0 10px 20px rgba(83, 46, 185, 0.22);
+    cursor: pointer;
   }
 
   .playerControls div:nth-child(2){

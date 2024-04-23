@@ -32,8 +32,8 @@ if(player.play()){
 
 const playlist = [
   {
-    title: "Alam mo na.. Di ba?",
-    artist: "someone",
+    title: "Song One",
+    artist: "Artist One",
     src: "audio/Alam Mo Na... Di Ba.mp3",
     imagePath: "images/test1.jpg"
   },
@@ -44,8 +44,8 @@ const playlist = [
     imagePath: "images/albumC2.jpg"
   },
   {
-    title: "Matagal ko na gusto tanongin",
-    artist: "someone",
+    title: "Song Three",
+    artist: "Artist Three",
     src: "path/to/song2.mp3",
     imagePath: "path/to/song1.jpg"
   },
@@ -75,6 +75,13 @@ function createSongListItem(song) {
     player.play();
     albumCover.src = song.imagePath; // Update album cover image path
     highlightSong(listItem); // Highlight the selected song
+
+      // Remove the "playing" class from all list items
+    const allListItems = document.querySelectorAll(".song-list li");
+    allListItems.forEach(item => item.classList.remove("playing"));
+
+    // Add the "playing" class to the clicked item
+    listItem.classList.add("playing");
   });
 
   listItem.addEventListener("mouseover", function() {
