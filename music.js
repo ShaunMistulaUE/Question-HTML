@@ -19,10 +19,30 @@ function playPauseFunc(){
   }
   else{
     player.play();
-    ctrlIcon.classList.add("fa-pause");
     ctrlIcon.classList.remove("fa-play");
+    ctrlIcon.classList.add("fa-pause");
   }
 }
+
+function playPFunc(){
+  if(ctrlIcon.classList.contains("fa-play") || !player.pause){
+
+    ctrlIcon.classList.remove("fa-play");
+    ctrlIcon.classList.add("fa-pause");
+  }
+}
+
+player.addEventListener("playing",function autoplayDt(){
+  if(player.autoplay){
+    if(ctrlIcon.classList.contains("fa-play")){
+      ctrlIcon.classList.remove("fa-play");
+      ctrlIcon.classList.add("fa-pause");
+    }
+  }
+});
+
+
+
 
 if(player.play()){
   setInterval(()=>{
@@ -114,10 +134,66 @@ function playAllSongs() {
     }
   });
 
+  // Get reference to the progress bar
+const progressBar = document.getElementById("progressBar");
+
+// Event listener for when the progress bar value changes (dragging or clicking)
+progressBar.addEventListener("input", function() {
+  // Update the player's current time based on the progress bar value
+  player.currentTime = progressBar.value;
+});
+
+// Event listener for when the user starts dragging the progress bar
+progressBar.addEventListener("mousedown", function() {
+  // Add event listener to handle mouse movement during dragging
+  document.addEventListener("mousemove", handleProgressBarDrag);
+});
+
+// Event listener for when the user stops dragging the progress bar
+document.addEventListener("mouseup", function() {
+  // Remove event listener for mouse movement after dragging
+  document.removeEventListener("mousemove", handleProgressBarDrag);
+});
+
+// Function to handle mouse movement during dragging
+function handleProgressBarDrag(event) {
+  // Calculate the new value of the progress bar based on mouse position
+  const rect = progressBar.getBoundingClientRect();
+  const offsetX = event.clientX - rect.left;
+  const progressBarWidth = rect.right - rect.left;
+  const progress = offsetX / progressBarWidth;
+  const newValue = progress * progressBar.max;
+
+  // Update the progress bar value and player's current time
+  progressBar.value = newValue;
+  player.currentTime = newValue;
+}
+
   // Start playback of the first song (optional play button not included)
   player.src = playlist[currentSongIndex].src;
   player.play();
 }
+
+// Get references to time elements
+const currentTimeDisplay = document.getElementById("currentTime");
+const totalTimeDisplay = document.getElementById("totalTime");
+
+// Function to format time in minutes and seconds
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+// Update current time and total time display
+player.addEventListener("timeupdate", function() {
+  currentTimeDisplay.textContent = formatTime(player.currentTime);
+});
+
+player.addEventListener("loadedmetadata", function() {
+  totalTimeDisplay.textContent = formatTime(player.duration);
+});
+
 
 // Event listener for 'seeked' event on the player
 player.addEventListener("seeked", function() {

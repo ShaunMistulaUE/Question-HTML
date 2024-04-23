@@ -13,18 +13,23 @@
 
     <nav id="navbot" class="navbar fixed-bottom navbar-expand">
       <div class="audioPlease">
-         
+    
           <div class="navbar-contents">
 
             <div class="playerControls">
 
-              <div><i class="fa-solid fa-backward" id="backward" style="color: rgb(255, 255, 255);"></i></div>
-              <div onclick="playPauseFunc"><i class="fa-solid fa-play" id="ctrlIcon" style="color: rgb(93, 223, 132);"></i></div>
-              <div><i class="fa-solid fa-forward" id="forward" style="color: white;"></i></div>
+             
+              <div onclick="playPauseFunc()"><i class="fa-solid fa-play" id="ctrlIcon" style="color: rgb(93, 223, 132);"></i></div>
+          
             </div>
             
-            <div class="navbar-One navbar ms-auto">
+            <div class="navbar-One">
               <audio id="player" autoplay></audio>
+              <div class="timeCont">
+                <span class="timeText" id="currentTime">0:00</span>  
+                <span class="timeTextLength" id="totalTime">0:00</span>
+              </div>
+              
               <input type="range" value="0" id="progressBar">
             </div>
   
@@ -42,7 +47,7 @@
           <img class="album-cover" id="album-cover" alt="Album Cover" src="images/test1.jpg" />
           <div style="margin-top: 25px;"></div>
 
-          <p class="ptext">Sige na labas tayo, tatalon ako sa 15th floor sige
+          <p class="ptext">Gusto kita, kaya sana gusto mo rin ako 😊🥺
           </p>
 
           <div>
@@ -59,7 +64,7 @@
                 <div></div>
             
             <div class="listBG">
-                <ul id="song-list" class="playing"></ul>
+                <ul onclick="playPFunc()" id="song-list" class="playing"></ul>
             </div>
 
            
