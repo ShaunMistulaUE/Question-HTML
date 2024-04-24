@@ -41,9 +41,7 @@
     <div class="container">
        
         <div class="playlist">
-
-          
-          
+          <p id="playingText" class="playingtext">Not Playing</p>
           <img class="album-cover" id="album-cover" alt="Album Cover" src="images/test1.jpg" />
           <div style="margin-top: 25px;"></div>
 
@@ -64,7 +62,7 @@
                 <div></div>
             
             <div class="listBG">
-                <ul onclick="playPFunc()" id="song-list" class="playing"></ul>
+                <ul onclick="handleClick(this), onclick="playPFunc()" id="song-list" class="playing"></ul>
             </div>
 
            

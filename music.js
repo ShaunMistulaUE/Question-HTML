@@ -5,6 +5,7 @@ const player = document.getElementById("player");
 const albumCover = document.getElementById("album-cover");
 const toggleAutoplayButton = document.getElementById("toggleAutoplay");
 let ctrlIcon = document.getElementById("ctrlIcon")
+const playingTextHead = document.getElementById("playingText");
 
 player.onloadedmetadata = function(){
   progressBar.max = player.duration;
@@ -16,11 +17,13 @@ function playPauseFunc(){
     player.pause();
     ctrlIcon.classList.remove("fa-pause");
     ctrlIcon.classList.add("fa-play");
+    playingTextHead.textContent = "";
   }
   else{
     player.play();
     ctrlIcon.classList.remove("fa-play");
     ctrlIcon.classList.add("fa-pause");
+    playingTextHead.textContent = "Now Playing";
   }
 }
 
@@ -32,6 +35,11 @@ function playPFunc(){
   }
 }
 
+function handleClick(element) {
+  // Toggle the "clicked" class on the clicked element
+  element.classList.toggle("clicked");
+}
+
 player.addEventListener("playing",function autoplayDt(){
   if(player.autoplay){
     if(ctrlIcon.classList.contains("fa-play")){
@@ -40,6 +48,23 @@ player.addEventListener("playing",function autoplayDt(){
     }
   }
 });
+
+
+
+
+var isPlaying = true; // or false depending on your logic
+
+    // Get the element by its id
+    var playingText = document.getElementById("playingText");
+
+    // Change the text content based on the value of isPlaying
+    if (isPlaying) {
+        playingText.textContent = "Now Playing";
+    } else {
+        playingText.textContent = "Not Playing";
+    }
+
+
 
 
 
