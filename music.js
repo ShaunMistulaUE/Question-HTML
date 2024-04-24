@@ -69,8 +69,71 @@ const playlist = [
     src: "path/to/song2.mp3",
     imagePath: "path/to/song1.jpg"
   },
+  {
+    title: "Song Three",
+    artist: "Artist Three",
+    src: "path/to/song2.mp3",
+    imagePath: "path/to/song1.jpg"
+  },
+  {
+    title: "Song Three",
+    artist: "Artist Three",
+    src: "path/to/song2.mp3",
+    imagePath: "path/to/song1.jpg"
+  },
   // ... more songs in the playlist
 ];
+
+// Function to create a list item for each song
+function createSongListItem(song) {
+  const listItem = document.createElement("li");
+  const songContainer = document.createElement("div"); // Container for title and artist
+  songContainer.classList.add("song-container"); // Add a class for styling (optional)
+  listItem.appendChild(songContainer);
+
+  const songTitle = document.createElement("span");
+  songTitle.textContent = song.title;
+  songContainer.appendChild(songTitle);
+
+  const artistSpan = document.createElement("span");
+  artistSpan.classList.add("artist"); // Add a class for styling (optional)
+  artistSpan.textContent = song.artist;
+  songContainer.appendChild(artistSpan);
+
+  // Event listener for when a song is clicked
+  listItem.addEventListener("click", function() {
+    // Set the source of the player to the selected song
+    player.src = song.src;
+    player.play();
+
+    // Update the album cover with the selected song's image
+    albumCover.src = song.imagePath;
+    currentSongIndex = index;
+
+    // Highlight the selected song
+    highlightSong(listItem);
+
+    // Remove the "playing" class from all list items
+    const allListItems = document.querySelectorAll(".song-list li");
+    allListItems.forEach(item => item.classList.remove("playing"));
+
+    // Add the "playing" class to the clicked item
+    listItem.classList.add("playing");
+  });
+
+  // Event listener for mouse hover effect (optional)
+  listItem.addEventListener("mouseover", function() {
+    listItem.classList.add("hover");
+  });
+
+  // Event listener for removing mouse hover effect (optional)
+  listItem.addEventListener("mouseout", function() {
+    listItem.classList.remove("hover");
+  });
+
+  return listItem;
+}
+
 
 
 
