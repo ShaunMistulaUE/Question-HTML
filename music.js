@@ -17,10 +17,10 @@ function playPauseFunc(){
     player.pause();
     ctrlIcon.classList.remove("fa-pause");
     ctrlIcon.classList.add("fa-play");
-    playingTextHead.textContent = "";
+    playingTextHead.textContent = "Test";
   }
-  else{
-    player.play();
+  else if(ctrlIcon.classList.contains("fa-play")){
+    player.play("fa-play");
     ctrlIcon.classList.remove("fa-play");
     ctrlIcon.classList.add("fa-pause");
     playingTextHead.textContent = "Now Playing";
