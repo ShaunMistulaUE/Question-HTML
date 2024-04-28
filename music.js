@@ -60,7 +60,7 @@ var isPlaying = true; // or false depending on your logic
 
     // Change the text content based on the value of isPlaying
     if (isPlaying) {
-        playingText.textContent = "Uhhhh";
+        playingText.textContent = "🔻 Scroll down for more 🔻";
     } else {
         playingText.textContent = "Not Playing";
     }

@@ -95,7 +95,7 @@
 
   .playerControls div{
     width: 45px;
-    height: 40px;
+    height: 0px;
     margin: 20px;
     background: #000000;
     display: inline-flex;
