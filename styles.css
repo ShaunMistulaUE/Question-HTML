@@ -51,6 +51,13 @@
     align-items: center;
   }
 
+
+  .playerControls div:nth-child(2){
+    transform: scale(1.5);
+    background-color: #111;
+    color: white;
+  }
+
   .navbar, fixed-bottom navbar-expand{
     display:inline;
     justify-content: center;
@@ -89,13 +96,13 @@
     justify-content: center;
     border-radius: 50%;
     color: #f53192;
-    box-shadow: 0 10px 20px rgba(83, 46, 185, 0.22);
+    box-shadow: 0 10px 20px rgba(7, 136, 46, 0.215);
     cursor: pointer;
   }
 
   .playerControls div{
     transform: scale(1.5);
-    background: rgb(232, 247, 234);
+    background: rgba(108, 108, 108, 0.708);
   }
 
   #progressBar{

@@ -12,6 +12,7 @@ player.onloadedmetadata = function(){
   progressBar.value = player.currentTime;
 }
 
+
 function playPauseFunc(){
   if(ctrlIcon.classList.contains("fa-pause")){
     player.pause();
@@ -63,10 +64,6 @@ var isPlaying = true; // or false depending on your logic
     } else {
         playingText.textContent = "Not Playing";
     }
-
-
-
-
 
 
 if(player.play()){
@@ -156,6 +153,9 @@ function createSongListItem(song) {
     listItem.classList.remove("hover");
   });
 
+  
+
+
   return listItem;
 }
 
@@ -219,8 +219,11 @@ function playAllSongs() {
       player.src = playlist[currentSongIndex].src;
       player.play();
       albumCover.src = playlist[currentSongIndex].imagePath; // Update album cover
+      updateCurrentPlayingSongTitle(currentSong.title); // Update current playing song title
+
     }
   });
+
 
   // Get reference to the progress bar
 const progressBar = document.getElementById("progressBar");
@@ -262,6 +265,7 @@ function handleProgressBarDrag(event) {
   player.play();
 }
 
+
 // Get references to time elements
 const currentTimeDisplay = document.getElementById("currentTime");
 const totalTimeDisplay = document.getElementById("totalTime");
@@ -300,6 +304,8 @@ playButton.addEventListener("click", function() {
   // Unmute after a short delay (optional)
   setTimeout(() => { player.muted = false; }, 0); // Unmute after 0.5 seconds
 });
+
+
 
 // Initial mute state (autoplay starts muted, optional)
 player.src = playlist[0].src; // Set the source of the first song
