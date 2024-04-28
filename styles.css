@@ -15,7 +15,7 @@
   animation: slide-in-bottom 1s ease-in-out forwards;
 }
 .navbar{
-  background: #3e3b3b31;
+  background: #b2afaf31;
   backdrop-filter: blur(20px);
   
   
@@ -64,10 +64,19 @@
     align-items: center;
   }
 
-  .song-list li.playing {
-    background-color: rgba(255, 255, 255, 0.2); /* Light background for highlight */
-    box-shadow: 0 0 5px rgba(172, 12, 12, 0.881); /* Subtle shadow for emphasis */
-    
+  .bottomText{
+    color: #535353;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .playing {
+    background-color: rgba(72, 72, 72, 0.2); /* Light background for highlight */
+    box-shadow: 0 0 0px rgba(172, 250, 178, 0.881); /* Subtle shadow for emphasis */
+   margin: 0;
+   padding: 0;
   }
 
   .timeCont{
@@ -117,9 +126,10 @@
     width: 100%;
     height: 6px;
     background: #4be667;
-    border-radius: 0px;
+    border-radius: 100px;
     cursor: pointer;
     margin: 40px 0;
+    box-shadow: 4px 5px 5px rgba(19, 170, 52, 0.22);
   }
 
   #progressBar::-webkit-slider-thumb{
@@ -128,9 +138,9 @@
     background: #31f541;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    border: 8px solid #000000;
-    box-shadow: e 5px 5px rgba(255,26,26,0.22);
+    border-radius: 450%;
+    border: 8px solid #000000e8;
+    box-shadow: 4px 5px 5px rgba(19, 170, 52, 0.22);
   }
 
   .music{
@@ -192,7 +202,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #acacac;
+  color: #a5a5a5;
 }
 .playlist{
   align-items: center;
@@ -217,6 +227,8 @@
 
 .song-container:hover {
   background-color: rgb(25, 192, 56); /* Optional hover background color */
+  box-shadow: 0 0 50px rgb(13, 126, 32);
+  animation: fadeOut 1s forwards; 
   /* Add other hover animations here (e.g., transform, opacity) */
 }
 
@@ -276,7 +288,7 @@
 
   color: #111;
             background: rgb(255, 255, 255);
-            box-shadow: 0 0 20pxF rgb(255, 255, 255);
+            box-shadow: 2px 3px 20px rgb(255, 255, 255);
 }
 
   .zoom-in-out-box2{
@@ -334,6 +346,18 @@
     0% { transform: translate(-50%,-50%) rotate(0deg); }
     100% { transform: translate(-50%,-50%) rotate(360deg); }
   }
+
+  @keyframes fadeOut {
+    from {
+      box-shadow: 0 0 50px rgb(13, 126, 32);
+      background-color: rgb(25, 192, 56);
+    }
+    to {
+      box-shadow: 0 0 50px rgb(51, 51, 51);
+      background-color: rgb(62, 62, 62);
+    }
+  }
+
   .ldio-0d4v8gn0jow{
     position: relative;
     width: 200px;
