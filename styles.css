@@ -8,7 +8,7 @@
 
 .backgroundMain{
   position:relative;
-  background-image: url(/images/test1.jpg);
+  background-image: url(/images/albumC2.jpg);
   filter: blur(50px);
   -webkit-filter: blur(5px);
   height: 100%;

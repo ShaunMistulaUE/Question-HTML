@@ -18,13 +18,13 @@ function playPauseFunc(){
     player.pause();
     ctrlIcon.classList.remove("fa-pause");
     ctrlIcon.classList.add("fa-play");
-    playingTextHead.textContent = "Test";
+    playingTextHead.textContent = "😶";
   }
   else if(ctrlIcon.classList.contains("fa-play")){
     player.play("fa-play");
     ctrlIcon.classList.remove("fa-play");
     ctrlIcon.classList.add("fa-pause");
-    playingTextHead.textContent = "Now Playing";
+    playingTextHead.textContent = "🎧🎵📻";
   }
 }
 
@@ -60,7 +60,7 @@ var isPlaying = true; // or false depending on your logic
 
     // Change the text content based on the value of isPlaying
     if (isPlaying) {
-        playingText.textContent = "Now Playing";
+        playingText.textContent = "Uhhhh";
     } else {
         playingText.textContent = "Not Playing";
     }
@@ -74,10 +74,10 @@ if(player.play()){
 
 const playlist = [
   {
-    title: "Song One",
+    title: "Gusto 'kita",
     artist: "Artist One",
-    src: "audio/Alam Mo Na... Di Ba.mp3",
-    imagePath: "images/test1.jpg"
+    src: "audio/GUSTO - ZACK TABUDLO.mp3",
+    imagePath: "images/albumC2.jpg"
   },
   {
     title: "Gusto 'kita'",
@@ -209,6 +209,12 @@ playlist.forEach(song => {
   songList.appendChild(listItem);
 });
 
+function updateCurrentPlayingSongTitle(title) {
+  const currentSongTitleElement = document.getElementById("currentSongTitle");
+  currentSongTitleElement.textContent = title;
+}
+
+
 // Function to play all songs and update album cover on song change
 function playAllSongs() {
   let currentSongIndex = 0; // Start from the first song
@@ -219,10 +225,9 @@ function playAllSongs() {
       player.src = playlist[currentSongIndex].src;
       player.play();
       albumCover.src = playlist[currentSongIndex].imagePath; // Update album cover
-      updateCurrentPlayingSongTitle(currentSong.title); // Update current playing song title
-
     }
   });
+
 
 
   // Get reference to the progress bar
@@ -295,20 +300,12 @@ player.addEventListener("seeked", function() {
   }
 });
 
-// Optional event listener for play button (modify as needed)
-playButton.addEventListener("click", function() {
-  // Potentially start playback muted for a better user experience
-  player.muted = true; // Uncomment this line if desired
-  player.src = playlist[0].src; // Set source of the first song
-  player.play();
-  // Unmute after a short delay (optional)
-  setTimeout(() => { player.muted = false; }, 0); // Unmute after 0.5 seconds
-});
-
-
 
 // Initial mute state (autoplay starts muted, optional)
 player.src = playlist[0].src; // Set the source of the first song
+// Call updateCurrentPlayingSongTitle to initially set the title of the first song
+
     player.play(); // Play muted audio
     playAllSongs();
+
 
