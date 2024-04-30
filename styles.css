@@ -20,6 +20,7 @@
 .navbar{
   background: #b2afaf31;
   backdrop-filter: blur(20px);
+  padding-bottom: 30px;
   
   
 }
@@ -69,10 +70,30 @@
 
   .bottomText{
     color: #535353;
-    padding-top: 150px;
+    padding-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+
+  .socmedCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none; 
+  }
+
+  .socmedCon i{
+    padding: 3em; 
+    height: 30px;
+    width: 30px;
+  }
+
+  .socmedCon a{
+    text-decoration: none; 
+    color: white;
   }
 
   .playing {
