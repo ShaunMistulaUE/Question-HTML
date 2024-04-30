@@ -1,7 +1,10 @@
 .background{
   position:relative;
-  /* background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(30, 29, 29),black); */
-  background-image: linear-gradient(rgb(136, 50, 50), rgb(72, 34, 104),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0));
+  /* background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(0, 0, 0),black); */
+  /* background-image: linear-gradient(rgb(5, 63, 13), rgb(82, 118, 81),rgb(89, 103, 90),rgb(44, 96, 56),rgb(0, 0, 0)); */
+  /* background-image: linear-gradient(rgb(136, 50, 50), rgb(72, 34, 104),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0)); */
+  background-image: linear-gradient(rgb(50, 57, 136), rgb(72, 34, 104),rgb(108, 49, 49),rgb(0, 0, 0),rgb(0, 0, 0));
+
   /* background-color: rgb(48, 48, 48); */
   height: 300%;
 }
