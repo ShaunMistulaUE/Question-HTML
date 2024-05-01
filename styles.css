@@ -86,7 +86,7 @@
   }
 
   .socmedCon i{
-    padding: 3em; 
+    padding: 2em; 
     height: 30px;
     width: 30px;
   }
@@ -293,8 +293,13 @@
 
 .artist {
   font-size: 0.8em; /* Reduce artist text size (optional) */
-  color: gray; /* Set artist text color to gray (optional) */
+  color: rgb(171, 171, 171); /* Set artist text color to gray (optional) */
   /* Optional styles for the artist text */
+}
+
+.subtext{
+  font-size: 0.9em; /* Reduce artist text size (optional) */
+  color: rgb(171, 171, 171);
 }
 
 #album-cover{

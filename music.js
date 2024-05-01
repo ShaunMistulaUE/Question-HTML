@@ -74,34 +74,35 @@ if(player.play()){
 
 const playlist = [
   {
-    title: "Gusto 'kita",
-    artist: "Artist One",
-    src: "audio/GUSTO - ZACK TABUDLO.mp3",
-    imagePath: "images/albumC2.jpg"
+    title: "Alam mo na... Di ba?",
+    artist: "Sugarpop",
+    subtext: "Kung mahal mo na rin ba ako",
+    src: "audio/Alam Mo Na... Di Ba.mp3",
+    imagePath: "images/sugarpop.jpg"
   },
   {
-    title: "Gusto 'kita'",
+    title: "Gusto",
     artist: "Zack Tabudlo",
     src: "audio/GUSTO - ZACK TABUDLO.mp3",
     imagePath: "images/albumC2.jpg"
   },
   {
-    title: "Song Three",
-    artist: "Artist Three",
-    src: "path/to/song2.mp3",
-    imagePath: "path/to/song1.jpg"
+    title: "Gusto kita",
+    artist: "Mahika - Adie",
+    src: "audio/mahika - adie.m4a",
+    imagePath: "images/mahika.jpg"
   },
   {
-    title: "Song Three",
-    artist: "Artist Three",
-    src: "path/to/song2.mp3",
-    imagePath: "path/to/song1.jpg"
+    title: "Maaari ba?",
+    artist: "Rael",
+    src: "audio/maaari ba - rael.m4a",
+    imagePath: "images/rael.jpg"
   },
   {
-    title: "Song Three",
-    artist: "Artist Three",
-    src: "path/to/song2.mp3",
-    imagePath: "path/to/song1.jpg"
+    title: "Pwede ba kitang ligawan?",
+    artist: "The Juans",
+    src: "audio/pwede ba kitang ligawan - the juans.m4a",
+    imagePath: "images/theJuans.jpg"
   },
   // ... more songs in the playlist
 ];
@@ -121,6 +122,11 @@ function createSongListItem(song) {
   artistSpan.classList.add("artist"); // Add a class for styling (optional)
   artistSpan.textContent = song.artist;
   songContainer.appendChild(artistSpan);
+
+  const subtext = document.createElement("span");
+  artistSpan.classList.add("subtext"); // Add a class for styling (optional)
+  artistSpan.textContent = song.artist;
+  songContainer.appendChild(subtext);
 
   // Event listener for when a song is clicked
   listItem.addEventListener("click", function() {
@@ -173,10 +179,17 @@ function createSongListItem(song) {
   songTitle.textContent = song.title;
   songContainer.appendChild(songTitle);
 
+  // const subtext = document.createElement("span");
+  // subtext.classList.add("subtext"); // Add a class for styling (optional)
+  // subtext.textContent = song.subtext;
+  // songContainer.appendChild(subtext);
+
   const artistSpan = document.createElement("span");
   artistSpan.classList.add("artist"); // Add a class for styling (optional)
   artistSpan.textContent = song.artist;
   songContainer.appendChild(artistSpan);
+
+ 
 
   listItem.addEventListener("click", function() {
     player.src = song.src;
