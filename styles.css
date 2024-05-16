@@ -6,6 +6,37 @@
   background-image: linear-gradient(rgb(50, 57, 136), rgb(72, 34, 104),rgb(108, 49, 49),rgb(0, 0, 0),rgb(0, 0, 0));
 
   /* background-color: rgb(48, 48, 48); */
+
+  height: 300%;
+}
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(19, 19, 21);
+  opacity: 1;
+  animation: fadeInTransparent 5s ease-in forwards;
+  z-index: 10;
+}
+
+@keyframes fadeInTransparent {
+  to {
+      opacity: 0;
+      display: none;
+  }
+}
+.backgroundIndex{
+  position:relative;
+  /* background-image: linear-gradient(rgb(77, 77, 77), rgb(76, 76, 76),rgb(39, 39, 39),rgb(0, 0, 0),black); */
+  /* background-image: linear-gradient(rgb(5, 63, 13), rgb(82, 118, 81),rgb(89, 103, 90),rgb(44, 96, 56),rgb(0, 0, 0)); */
+  /* background-image: linear-gradient(rgb(136, 50, 50), rgb(72, 34, 104),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0)); */
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0),rgb(108, 49, 49),rgb(0, 0, 0),rgb(0, 0, 0));
+
+  /* background-color: rgb(48, 48, 48); */
   height: 300%;
 }
 
@@ -307,6 +338,24 @@
   height: 250px;
   background-color: aliceblue;
   
+}
+
+.redirect-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgba(0, 123, 255, 0); /* Translucent background */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #ffffff33; /* Border */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.redirect-button:hover {
+  background-color: rgba(0, 87, 179, 0.337); /* Darker translucent background on hover */
+  border-color: #ffffff; /* Change border color on hover */
 }
 
 .album-cover{
